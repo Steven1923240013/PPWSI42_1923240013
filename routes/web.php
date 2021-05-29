@@ -34,11 +34,6 @@ Route::get("/kenalan/{nama}/{npm}", function($nama, $npm){
     $data = ['nama' => $nama, 'npm' => $npm];
     return view("hallo", $data);
 });
-Route::get('/prodi', [ProdiController::class, 'index']);
-
-contains the "web" middleware group.
-
-*/
 
 Route::get('/', function (){
     return view('welcome');
