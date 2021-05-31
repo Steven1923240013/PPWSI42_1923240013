@@ -76,3 +76,17 @@ Route::get('/fakultas', function () {
     $fakultas = ["Fakultas Ilmu Komputer dan Rekayasa", "Fakultas Ilmu Ekonomi"];
     return view('fakultas.index', compact('Fakultas'));
 });
+
+Route::get('/mahasiswa/insert-qb', [MahasiswaController::class, 'insertQb']);
+Route::get('/mahasiswa/update-qb', [MahasiswaController::class, 'updateQb']);
+Route::get('/mahasiswa/delete-qb', [MahasiswaController::class, 'deleteQb']);
+Route::get('/mahasiswa/select-qb', [MahasiswaController::class, 'selectQb']);
+
+Route::get('/mahasiswa/insert-elq', [MahasiswaController::class, 'insertElq']);
+Route::get('/mahasiswa/update-elq', [MahasiswaController::class, 'updateElq']);
+Route::get('/mahasiswa/delete-elq', [MahasiswaController::class, 'deleteElq']);
+Route::get('/mahasiswa/select-elq', [MahasiswaController::class, 'selectElq']);
+
+Route::get('/prodi/all-join-fascade', [ProdiController::class, 'allJoinFascade']);
+Route::get('/prodi/all-join-elq', [ProdiController::class, 'allJoinElq']);
+Route::get('/mahasiswa/all-join-elq', [MahasiswaController::class, 'allJoinElq']);
