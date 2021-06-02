@@ -9,8 +9,3 @@ class Mahasiswa extends Model
 {
     use HasFactory;
 }
-
-public function prodi()
-{
-    return $this->belogsTo('App\Models\Prodi');
-}
